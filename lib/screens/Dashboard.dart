@@ -247,7 +247,7 @@ class _DashboardState extends State<Dashboard>
                               },
                               title: Text(_data.docs[i].data()['topic']),
                               subtitle: Text(
-                                  "${_data.docs[i].data()['date']} - ${_from.hour.toString()} : ${_from.minute.toString()} -> ${_to.hour.toString()} : ${_to.minute.toString()}"),
+                                  "${_data.docs[i].data()['date']} - ${_from.hour.toString().padLeft(2, '0')} : ${_from.minute.toString().padLeft(2, '0')} -> ${_to.hour.toString().padLeft(2, '0')} : ${_to.minute.toString().padLeft(2, '0')}"),
                             ),
                           );
                         });

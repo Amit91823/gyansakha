@@ -114,7 +114,7 @@ class _UpdateScheduledScreenState extends State<UpdateScheduledScreen> {
                         },
                         initialValue: (time1 == null)
                             ? "${DateTime.fromMicrosecondsSinceEpoch(_data?.data()!['from']).hour}:${DateTime.fromMicrosecondsSinceEpoch(_data?.data()!['from']).minute}"
-                            : "${time1?.hour}:${time1?.minute}",
+                            : "${time1?.hour.toString().padLeft(2, '0')}:${time1?.minute.toString().padLeft(2, '0')}",
                         decoration: InputDecoration(
                           labelText: "From",
                         ),
@@ -147,7 +147,7 @@ class _UpdateScheduledScreenState extends State<UpdateScheduledScreen> {
                         },
                         initialValue: (time2 == null)
                             ? "${DateTime.fromMicrosecondsSinceEpoch(_data?.data()!['to']).hour}:${DateTime.fromMicrosecondsSinceEpoch(_data?.data()!['to']).minute}"
-                            : "${time2?.hour}:${time2?.minute}",
+                            : "${time2?.hour.toString().padLeft(2, '0')}:${time2?.minute.toString().padLeft(2, '0')}",
                         decoration: InputDecoration(
                           labelText: "To",
                         ),
